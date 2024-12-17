@@ -16,6 +16,7 @@ print(dictionary_1)  # {}
 dictionary['imie'] = "Radek"
 print(dictionary)  # {'imie': 'Radek'}
 dictionary["wiek"] = 39
+
 print(dictionary)  # {'imie': 'Radek', 'wiek': 39}
 
 print(dictionary.keys())  # dict_keys(['imie', 'wiek'])
@@ -42,7 +43,24 @@ dict_small.update([('y', 3), ("z", 5)])
 print(dict_small)  # {'x': 2, 'y': 3, 'z': 5}
 
 # input() - pozwala wprowadzic dane do komputera
-tekst = input('Podaj imię')
-print(tekst)
+# tekst = input('Podaj imię') # zwraca str
+# print(tekst)
 # Podaj imięRadek
 # Radek
+# napisac aplikacje kalkulator
+#
+
+# a = int(input("Podaj pierwszą liczbę"))
+# b = input("Podaj drugą liczbę")
+# print(f"Wynik działania {a} + {b} = {a + float(b)}")  # Wynik działania 5 + 6 = 11.0
+
+# napisac aplikacje słownik pol_ang
+
+pol_ang = {"kot": 'cat', 'pies': "dog", 'dach': 'roof'}
+print("znam takie słowka", pol_ang.keys())
+odp = input("podaj słówko do przetłumaczenia")
+# print(pol_ang[odp.strip().lower()])
+# print(pol_ang[odp.strip().casefold()])
+
+print(pol_ang.get(odp.strip().casefold()))
+print(pol_ang.get(odp.strip().casefold(), "nie mo"))
