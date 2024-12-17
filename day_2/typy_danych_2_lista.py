@@ -96,4 +96,4 @@ print(lista)
 # ['Radek', 'Krzysztof', 'Zenek', 'Tomek', 'Marek', 'Bogdan', 'Żaklina', 'Asia']
 print(lista.pop(5))  # Bogdan
 print(lista.pop(-3))  # Marek
-print(lista.pop())  # Asia, usnie ostatni element z listy
+print(lista.pop())  # Asia, usunie ostatni element z listy
