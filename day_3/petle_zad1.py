@@ -74,3 +74,54 @@ for c in lista3:
 # Przy każdym przejściu pętli 4
 # Przy każdym przejściu pętli 6
 # Przy każdym przejściu pętli 8
+
+imiona = ["Radek", 'Tomek', "Zenek", "Ania"]
+print(imiona)
+print(type(imiona))
+# ['Radek', 'Tomek', 'Zenek', 'Ania']
+# <class 'list'>
+
+for p in imiona:
+    print(p)
+# Radek
+# Tomek
+# Zenek
+# Ania
+
+# 0 Radek
+
+for p in imiona:
+    print(imiona.index(p), p)
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+
+for i in range(len(imiona)):  # range(4) -> 0123
+    print(i, imiona[i])
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+
+# enumerate() - numeruje kolekcje i zwraca numer i element
+for p in enumerate(imiona):
+    print(p)
+(0, 'Radek')
+(1, 'Tomek')
+(2, 'Zenek')
+(3, 'Ania')
+
+for i, p in enumerate(imiona):
+    print(i, p)
+
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+for i, p in enumerate(imiona, start=1):
+    print(i, p)
+# 1 Radek
+# 2 Tomek
+# 3 Zenek
+# 4 Ania
