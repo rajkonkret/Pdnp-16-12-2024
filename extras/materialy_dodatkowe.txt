@@ -116,3 +116,6 @@ spam -= 1    spam = spam - 1
 spam *= 1    spam = spam * 1
 spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
+
+https://pl.altapps.net/soft/hackerrank-com?page=2&utm_content=cmp-true
+https://www.w3schools.com/python/
