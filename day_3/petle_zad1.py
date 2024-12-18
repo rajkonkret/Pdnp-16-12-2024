@@ -1,6 +1,7 @@
 # pętle - możliwośc wykonaia kodu wielokrotnie
 # for - pętla iteracyjna
 import random
+from itertools import zip_longest
 
 for i in range(5):  # 0 do 4 - pięć razy
     print(i)
@@ -126,12 +127,84 @@ for i, p in enumerate(imiona, start=1):
 # 3 Zenek
 # 4 Ania
 
-imiona = ["Radek", 'Tomek', "Zenek", "Ania"]
+imiona = ["Radek", 'Tomek', "Zenek", "Ania", "Ewa"]
 wiek = [44, 55, 32, 27]
 # Radek 44
-for p in imiona:
-    print(p, wiek[imiona.index(p)])
+# for p in imiona:
+#     print(p, wiek[imiona.index(p)])
 # Radek 44
 # Tomek 55
 # Zenek 32
 # Ania 27
+
+# Po dodaniu elementu do listy imiona
+# Traceback (most recent call last):
+#   File "C:\Users\CSComarch\PycharmProjects\Pdnp-16-12-2024\day_3\petle_zad1.py", line 133, in <module>
+#     print(p, wiek[imiona.index(p)])
+#              ~~~~^^^^^^^^^^^^^^^^^
+# IndexError: list index out of range
+
+# zip() - łączy kolekcje
+for i in zip(imiona, wiek):
+    print(i)
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+for i, w in zip(imiona, wiek):
+    print(i, w)
+# Radek 44
+# Tomek 55
+# Zenek 32
+# Ania 27
+
+# 0 Radek 44
+for i in enumerate(zip(imiona, wiek)):
+    print(i)
+(0, ('Radek', 44))
+(1, ('Tomek', 55))
+(2, ('Zenek', 32))
+(3, ('Ania', 27))
+a, b = (0, ('Radek', 44))
+print(a, b)  # 0 ('Radek', 44)
+c, d = b
+print(c, d)
+print(a, c, d)  # 0 Radek 44
+a, (c, d) = (3, ('Ania', 27))
+for i, (p, w) in enumerate(zip(imiona, wiek)):
+    print(i, p, w)
+# 0 Radek 44
+# 1 Tomek 55
+# 2 Zenek 32
+# 3 Ania 27
+
+zip_list = zip_longest(imiona, wiek, fillvalue=None)
+print(zip_list)  # <itertools.zip_longest object at 0x0000014636A29210>
+print("------")
+for i in zip_list:
+    print(i)
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+# ('Ewa', None)
+print("-----")
+for i in zip_list:
+    print(i)
+# mozemy wykorzystac raz
+zip_list = zip_longest(imiona, wiek, fillvalue=None)
+zipped = list(zip_list)
+for i in zipped:
+    print(i)
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+# ('Ewa', None)
+for o, w in zipped:
+    print(o, w)
+# Radek 44
+# Tomek 55
+# Zenek 32
+# Ania 27
+# Ewa None
