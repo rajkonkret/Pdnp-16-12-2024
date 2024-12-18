@@ -46,3 +46,10 @@ print(ang_pol)
 # {'cat': 'kot', 'dog': 'pies', 'roof': 'dach'}
 print({value: key for key, value in pol_ang.items()})
 # {'cat': 'kot', 'dog': 'pies', 'roof': 'dach'}
+
+# test Tabnine
+print(pol_ang.get("kot"))  # cat
+print(pol_ang.get("zwierzak"))  # None
+# zrob petle po slowniku
+for k, v in pol_ang.items():
+    print(f"Słowo polskie: {k}, Słowo angielskie: {v}")
