@@ -53,3 +53,7 @@ print(pol_ang.get("zwierzak"))  # None
 # zrob petle po slowniku
 for k, v in pol_ang.items():
     print(f"Słowo polskie: {k}, Słowo angielskie: {v}")
+
+print(dictionary.get("Imie"))  # nie ma klucza, zwraca None
+print(dictionary.get("Imie", "default"))  # nie ma klucza, zwraca default
+print(dictionary.update({'data': '30-12-2024'}))  # None
