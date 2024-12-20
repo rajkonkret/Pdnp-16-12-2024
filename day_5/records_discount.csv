@@ -1,6 +1,6 @@
-sku,exp_date,price
-1,today,100
-2,today,200
-3,tomorrow,500
-4,today,200.0
-5,tomorrow,99.99
+sku;exp_date;price
+1;today;100
+2;today;200
+3;tomorrow;500
+4;today;200.0
+5;tomorrow;99.99
