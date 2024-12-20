@@ -121,3 +121,6 @@ https://pl.altapps.net/soft/hackerrank-com?page=2&utm_content=cmp-true
 https://www.w3schools.com/python/
 NLP - analiza tekstów
 regex - wyrażenia regularna, parsowanie tekstów
+
+pip freeze > requirements.txt
+pip install -r .\requirements.txt
